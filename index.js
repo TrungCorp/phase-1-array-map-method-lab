@@ -12,5 +12,21 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+    const newArr = []
+    for(let element of tutorials)
+    {
+      const innerTemp1 = []
+      const tempArry = element.split(' ')
+      for(let char of tempArry)
+      {
+        
+        let newWord =char.charAt(0).toUpperCase()+char.slice(1)
+        innerTemp1.push(newWord)
+      }
+      let capWord = innerTemp1.join(" ")
+      newArr.push(capWord)
+    }
+    return newArr
+    
 }
+
